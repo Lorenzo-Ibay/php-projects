@@ -69,6 +69,6 @@ function deleteFromDB($path , $sql){
         echo "Error Delete Failed";
         die();
     } else {
-        echo  echo "Sql : " . $sql . " \n has been run successfully";
+        echo "Sql : " . $sql . " \n has been run successfully";
     }
 }
