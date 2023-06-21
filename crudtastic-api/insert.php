@@ -9,9 +9,7 @@ $path = './database.db';
 
 if($_POST['entry']){
     $entry = $_POST['entry'];
-    insertIntoDB(
-        $path,
-        '
+    insertIntoDB($path,'
     INSERT INTO ' . $tableName . '(entry) VALUES("' . $entry . '");'
     );
 }
