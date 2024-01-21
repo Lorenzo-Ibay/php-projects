@@ -1,8 +1,16 @@
 <?php
+session_start();
 if (isset($_POST['submit'])) {
 
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $password = $_POST['password'];
+
+    if($username == 'ligma' && $password == 'password'){
+      $_SESSION['username'] = $username ;
+      header('Location: /php-procjets/Touching basics/extras/dashboard.php');
+    } else {
+      echo 'ligma balls';
+    }
 } ?>
 
   <!-- Pass data through a form -->
